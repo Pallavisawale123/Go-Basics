@@ -38,4 +38,15 @@ func main() {
 	fmt.Println("Print the scores : ", scores)
 	fmt.Println("Print the scores : ", sort.IntsAreSorted(scores))
 
+	//how to remove slice based on index
+
+	var courses = []string{"python", "java", "go", "ruby", "javascript"}
+	fmt.Println("courses are ", courses)
+
+	//remove second index value
+	var index = 2
+
+	courses = append(courses[:index], courses[index+1:]...)
+	fmt.Println("Cources contains : ", courses)
+
 }
