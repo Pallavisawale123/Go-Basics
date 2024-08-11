@@ -28,9 +28,11 @@ func main() {
 	}
 
 	score1 := 1
-
 	fmt.Println("continue example in golang")
 	for score1 < 6 {
+		if score1 == 2 {
+			goto lco
+		}
 		if score1 == 4 {
 			score1++
 			continue
@@ -38,5 +40,7 @@ func main() {
 		fmt.Println("value of score is : ", score1)
 		score1++
 	}
+lco:
+	fmt.Println("validated score is 2 using label")
 
 }
